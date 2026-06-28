@@ -22,7 +22,7 @@ headerRoot.innerHTML = `
           <ul class="nav_ul">
             <li class="nav_li">Главная</li>
             <li class="nav_li">Каталог</li>
-            <li class="nav_li">Дабавить авто</li>
+            <li class="nav_li">Добавить авто</li>
             <li class="nav_li">О нас</li>
             <li class="nav_li">Контакты</li>
           </ul>
@@ -56,7 +56,7 @@ headerRoot.innerHTML = `
             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
-          <btn class="nav_btn">Дабавить объявления +</btn>
+          <btn class="nav_btn">Добавить объявления +</btn>
         </div>
       </div>
     </div>
