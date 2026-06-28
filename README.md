@@ -20,7 +20,7 @@ cd CarShop
 ```json
 {
   "ConnectionStrings": {
-    "Default": "Server=localhost;Database=CarShopDb;Trusted\_Connection=True;TrustServerCertificate=True;"
+    "Default": "Server=localhost;Database=CarShopDb;TrustedConnection=True;TrustServerCertificate=True;"
   }
 }
 ```
