@@ -20,12 +20,12 @@ cd CarShop
 ```json
 {
   "ConnectionStrings": {
-    "Default": "Server=localhost;Database=CarShopDb;TrustedConnection=True;TrustServerCertificate=True;"
+    "Default": "Server=localhost;Database=CarShopDB;Integrated Security=True;TrustServerCertificate=True;"
   }
 }
 ```
 
-> Если твой SQL Server называется иначе (например `DESKTOP-ABC123` или `localhost\\SQLEXPRESS`) — замени `localhost` на имя своего сервера.
+> Если твой SQL Server называется иначе (например `DESKTOP-TKQNJBJ\\MSSQLSERVERMY` или `localhost\\SQLEXPRESS`) — замени `localhost` на имя своего сервера.
 > Имя сервера можно посмотреть в SQL Server Management Studio при входе.
 
 \---
