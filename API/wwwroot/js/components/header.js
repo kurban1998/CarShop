@@ -56,7 +56,7 @@ headerRoot.innerHTML = `
             <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
           </svg>
-          <btn class="nav_btn">Добавить объявления +</btn>
+          <button class="nav_btn">Добавить объявления +</button>
         </div>
       </div>
     </div>
