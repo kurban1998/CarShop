@@ -77,14 +77,6 @@ catalog.innerHTML =
 const template = document.getElementById('catalog_template');
 const catalogCards = document.getElementById('catalog_cards');
 
-const tempCar = {
-  brand: '-----',
-  model: '-----',
-  year: '-----',
-  price: '-----',
-  imageUrl: 'https://placehold.co/400x250',
-};
-
 function renderCars(cars) {
   catalogCards.innerHTML = '';
   cars.forEach(car => {
@@ -98,9 +90,16 @@ function renderCars(cars) {
   })
 }
 
-function renderTempCars(cars) {
+function renderTempCars() {
+  const tempCar = {
+    brand: '-----',
+    model: '-----',
+    year: '-----',
+    price: '-----',
+    imageUrl: 'https://placehold.co/400x250',
+  };
   catalogCards.innerHTML = '';
-  for (let i = 6; i > 0; i--) {
+  for (let i = 0; i < 6; i++) {
     const clone = template.content.cloneNode(true);
     clone.querySelector('.card_img').src = tempCar.imageUrl;
     clone.querySelector('.card_brand').textContent = tempCar.brand;
@@ -111,11 +110,12 @@ function renderTempCars(cars) {
   }
 }
 
-renderTempCars(tempCar);
+renderTempCars();
 
 try {
   const cars = await getCars();
   renderCars(cars);
 } catch (err) {
   console.error(err);
+  catalogCards.innerHTML = '<p>Ошибка загрузки машин</p>'
 }
