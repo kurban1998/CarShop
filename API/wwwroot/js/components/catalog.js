@@ -1,6 +1,3 @@
-const template = document.getElementById('catalog_template');
-const catalogCards = document.getElementById('catalog_cards');
-
 const catalog = document.getElementById('catalog');
 catalog.innerHTML =
   `
@@ -74,13 +71,13 @@ catalog.innerHTML =
         </div>
       </div>
     </div>
-  `
+  `;
 
-
+const template = document.getElementById('catalog_template');
+const catalogCards = document.getElementById('catalog_cards');
 
 const response = await fetch('http://localhost:5025/api/cars');
 const cars = await response.json();
-console.log(cars);
 
 cars.map(car => {
   const clone = template.content.cloneNode(true);
