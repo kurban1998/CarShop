@@ -4,7 +4,8 @@
 }
 
 .filter {
-  width: 300px;
+  max-width: 300px;
+  min-width: 300px;
   padding: 25px;
   display: flex;
   flex-direction: column;
@@ -68,7 +69,7 @@
 }
 
 .catalog_cards {
-  padding-left: 70px;
+  padding: 0 25px 0 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;

@@ -3,8 +3,13 @@ export async function getCars() {
 
   if (!response.ok) {
     throw new Error('Ошибка загрузки машин');
-    
   }
 
+  await delay(1500);
+
   return await response.json();
+}
+
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }

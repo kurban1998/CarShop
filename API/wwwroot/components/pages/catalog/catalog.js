@@ -77,14 +77,44 @@ catalog.innerHTML =
 const template = document.getElementById('catalog_template');
 const catalogCards = document.getElementById('catalog_cards');
 
+const tempCars = [
+  {
+    brand: 'Toyota',
+    model: 'Camry',
+    year: 2020,
+    price: 35000,
+    imageUrl: 'https://placehold.co/400x250',
+  },
+  {
+    brand: 'BMW',
+    model: 'X5',
+    year: 2021,
+    price: 40000,
+    imageUrl: 'https://placehold.co/400x250',
+  },
+  {
+    brand: 'Audi',
+    model: 'A6',
+    year: 2019,
+    price: 32000,
+    imageUrl: 'https://placehold.co/400x250',
+  },
+];
+
+renderCars(tempCars);
+
 const cars = await getCars();
 
-cars.map(car => {
-  const clone = template.content.cloneNode(true);
-  clone.querySelector('.card_img').src = car.imageUrl;
-  clone.querySelector('.card_brand').textContent = car.brand;
-  clone.querySelector('.card_model').textContent = car.model;
-  clone.querySelector('.card_year').textContent = car.year;
-  clone.querySelector('.card_price').textContent = car.price + ' tg';
-  catalogCards.appendChild(clone)
-})
+function renderCars(cars) {
+  catalogCards.innerHTML = '';
+  cars.forEach(car => {
+    const clone = template.content.cloneNode(true);
+    clone.querySelector('.card_img').src = car.imageUrl;
+    clone.querySelector('.card_brand').textContent = car.brand;
+    clone.querySelector('.card_model').textContent = car.model;
+    clone.querySelector('.card_year').textContent = car.year;
+    clone.querySelector('.card_price').textContent = car.price + ' tg';
+    catalogCards.appendChild(clone)
+  })
+}
+renderCars(cars);
