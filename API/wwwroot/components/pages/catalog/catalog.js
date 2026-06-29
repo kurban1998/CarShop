@@ -1,3 +1,4 @@
+import { getCars } from "../../../services/car-service/car-service.js";
 const catalog = document.getElementById('catalog');
 catalog.innerHTML =
   `
@@ -76,8 +77,7 @@ catalog.innerHTML =
 const template = document.getElementById('catalog_template');
 const catalogCards = document.getElementById('catalog_cards');
 
-const response = await fetch('http://localhost:5025/api/cars');
-const cars = await response.json();
+const cars = await getCars();
 
 cars.map(car => {
   const clone = template.content.cloneNode(true);
