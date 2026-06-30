@@ -51,14 +51,36 @@ headerRoot.innerHTML = `
               stroke-width="2" stroke-linecap="round" />
           </svg>
           <span class="profile_span">Профиль</span>
-          <svg class="profile_arrow icon icon-chevron-down" width="18" height="18" viewBox="0 0 24 24"
-            fill="none">
-            <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
+          <button id="profile_arrow_btn" class="profile_arrow_btn">
+            <svg class="profile_arrow icon icon-chevron-down" width="18" height="18" viewBox="0 0 24 24"
+              fill="none">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div id="profile_dropdown" class="profile_dropdown">
+            <button class="profile_login_btn" id="login_btn">Войти</button>
+            <button class="profile_register_btn" id="register_btn">Регистрация</button>
+          </div>
           <button class="nav_btn red_btn">Добавить объявления +</button>
         </div>
       </div>
     </div>
   </div>
 `;
+
+const profileArrowBtn = document.getElementById('profile_arrow_btn');
+const profileDropdown = document.getElementById('profile_dropdown');
+
+profileArrowBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  profileDropdown.classList.toggle('active');
+});
+
+document.addEventListener('click', () => {
+  profileDropdown.classList.remove('active');
+});
+
+profileDropdown.addEventListener('click', (e) => {
+  e.stopPropagation();
+})

@@ -1,0 +1,33 @@
+.modal_showed {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 998;
+}
+
+.modal_closed {
+  display: none;
+}
+
+.modal_container {
+  position: fixed;
+  top: 3vh;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 999;
+  width: 80vw;
+  height: 94vh;
+  background: #FFFFFF;
+  border-radius: 15px;
+  overflow: hidden;
+
+}
+
+.modal_benefits {
+  width: 45%;
+  height: 100%;
+  background-image: url('../../../assets/images/background-car.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

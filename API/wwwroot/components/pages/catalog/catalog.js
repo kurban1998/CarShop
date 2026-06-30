@@ -110,12 +110,16 @@ function renderTempCars() {
   }
 }
 
-renderTempCars();
+async function initCatalog() {
+  renderTempCars();
 
-try {
-  const cars = await getCars();
-  renderCars(cars);
-} catch (err) {
-  console.error(err);
-  catalogCards.innerHTML = '<p>Ошибка загрузки машин</p>'
+  try {
+    const cars = await getCars();
+    renderCars(cars);
+  } catch (err) {
+    console.error(err);
+    catalogCards.innerHTML = '<p>Ошибка загрузки машин</p>'
+  }
 }
+
+initCatalog()

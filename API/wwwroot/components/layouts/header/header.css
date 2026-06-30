@@ -60,6 +60,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  position: relative;
 }
 
 .profile_icon,
@@ -124,4 +125,41 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.profile_arrow_btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profile_dropdown {
+  position: absolute;
+  top: 40px;
+  right: 200px;
+  width: 160px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  display: none;
+  z-index: 100;
+}
+
+.profile_dropdown.active {
+  display: block;
+}
+
+.profile_dropdown_btn {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profile_dropdown_btn:hover {
+  background: #f3f4f6;
 }
