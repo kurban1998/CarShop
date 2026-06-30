@@ -1,0 +1,56 @@
+body {
+  background: #f3f4f6;
+  font-size: 14px;
+}
+
+:root {
+  --color-primary: #2563eb;
+  --color-text: #111827;
+  --color-bg: #f5f5f5;
+  --container-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.red_btn {
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background: #e02220;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.red_btn:hover {
+  background: #c91f1d;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(224, 34, 32, 0.25);
+}
+
+.red_btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.icon {
+  color: #111827;
+  transition: color 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.icon:hover {
+  color: #e02220;
+  transform: scale(1.08);
+}

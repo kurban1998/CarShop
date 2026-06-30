@@ -1,0 +1,165 @@
+﻿.header {
+  background: #ffffff;
+  color: var(--color-text);
+}
+
+.header_container {
+  width: var(--container-width);
+  height: 110px;
+  padding: 35px;
+  margin: 0 auto 30px;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_container {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo_icon {
+  width: 55px;
+  height: 30px;
+}
+
+.logo_title {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav_ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav_li {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav_li:hover {
+  color: #e02220;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.profile_icon,
+.profile_arrow,
+.action_icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.profile_span {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.profile_arrow {
+  transition: color 0.2s ease;
+}
+
+.profile:hover .profile_span,
+.profile:hover .profile_arrow {
+  color: #e02220;
+}
+
+.favorite-btn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorite-btn.active .icon {
+  color: #e02220;
+  fill: #e02220;
+}
+
+.nav_btn {
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background: #e02220;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.icon-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile_arrow_btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.profile_dropdown {
+  position: absolute;
+  top: 40px;
+  right: 200px;
+  width: 160px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  display: none;
+  z-index: 100;
+}
+
+.profile_dropdown.active {
+  display: block;
+}
+
+.profile_dropdown_btn {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.profile_dropdown_btn:hover {
+  background: #f3f4f6;
+}
