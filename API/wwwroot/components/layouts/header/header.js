@@ -59,8 +59,8 @@ headerRoot.innerHTML = `
             </svg>
           </button>
           <div id="profile_dropdown" class="profile_dropdown">
-            <button class="profile_login_btn" id="login_btn">Войти</button>
-            <button class="profile_register_btn" id="register_btn">Регистрация</button>
+            <button class="profile_dropdown_btn" id="login_btn">Войти</button>
+            <button class="profile_dropdown_btn" id="register_btn">Регистрация</button>
           </div>
           <button class="nav_btn red_btn">Добавить объявления +</button>
         </div>
